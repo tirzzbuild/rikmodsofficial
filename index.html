@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07152f">
+<title>RIKK Officiall — Direct Link</title>
+<style>
+:root {
+  --site-primary: #1677ff;
+  --site-secondary: #102e63;
+  --site-background: #07152f;
+  --site-on-primary: #ffffff;
+  --site-on-secondary: #eef5ff;
+  --site-on-background: #eef5ff;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); color: #eef5ff; background: var(--site-background); }
+#app { min-height: 100vh; padding: 24px 16px 40px; background: radial-gradient(ellipse at 50% -10%, #163d7b 0%, #07152f 55%); }
+.wrap { width: min(100%, 680px); margin: 0 auto; }
+.top { display:flex; align-items:center; gap:13px; margin: 10px 0 28px; }
+.logo { display:grid; place-items:center; width:54px; height:54px; border:1px solid #4ca9ff; border-radius:17px; background:linear-gradient(145deg,#1c75ff,#0b2552); box-shadow:0 0 28px #1677ff42; font-size:24px; font-weight:900; }
+.brand { font-size:20px; font-weight:850; letter-spacing:.4px; }
+.subbrand { margin-top:4px; color:#8fb6e9; font-size:12px; letter-spacing:2px; text-transform:uppercase; }
+.pill { display:inline-flex; align-items:center; gap:7px; border:1px solid #254b7b; border-radius:999px; padding:7px 11px; color:#9ecbff; font-size:12px; }
+h1 { font-size:clamp(30px,7vw,46px); line-height:1.08; letter-spacing:-1.4px; margin:17px 0 12px; }
+h1 span { color:#54bdff; }
+.lead { color:#a9bfdc; line-height:1.65; font-size:15px; margin:0 0 24px; }
+.panel { padding:clamp(18px,5vw,28px); border:1px solid #25446e; border-radius:24px; background:linear-gradient(155deg,#10264aeb,#091a34f5); box-shadow:0 18px 60px #0005; }
+label { display:block; margin-bottom:10px; font-weight:750; font-size:14px; }
+textarea { width:100%; min-height:112px; resize:vertical; border:1px solid #315784; border-radius:14px; outline:none; padding:15px; color:#f4f8ff; background:#061329; font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+textarea:focus { border-color:#53b9ff; box-shadow:0 0 0 3px #1677ff2b; }
+.actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:13px; }
+button { cursor:pointer; border:0; border-radius:12px; padding:13px 16px; font-weight:800; font-size:14px; }
+.primary { flex:1 1 180px; color:white; background:linear-gradient(100deg,#1677ff,#13a8f8); box-shadow:0 7px 24px #1677ff35; }
+.secondary { color:#d7eaff; background:#18365e; border:1px solid #315784; }
+button:focus-visible { outline:2px solid #8bd6ff; outline-offset:3px; }
+.result { display:none; margin-top:17px; border:1px solid #315784; border-radius:14px; padding:14px; background:#07172d; overflow-wrap:anywhere; }
+.result.show { display:block; }
+.result strong { display:block; margin-bottom:7px; }
+.result p { margin:0; color:#b3c7e0; font-size:13px; line-height:1.55; }
+.result.good { border-color:#1f9978; }
+.result.bad { border-color:#d69a42; }
+.small { margin:16px 2px 0; color:#819ab9; font-size:12px; line-height:1.65; }
+.features { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px; }
+.feature { border:1px solid #1c3b63; background:#0a1c36; border-radius:15px; padding:14px 12px; }
+.feature .ico { font-size:20px; }
+.feature b { display:block; margin-top:8px; font-size:12px; }
+.feature span { display:block; margin-top:5px; color:#8fa9c9; font-size:11px; line-height:1.5; }
+footer { text-align:center; margin-top:26px; color:#607b9f; font-size:11px; letter-spacing:.5px; }
+@media(max-width:430px) { .features { grid-template-columns:1fr; } .feature { display:flex; gap:12px; align-items:center; } .feature b { margin-top:0; } .feature span { margin-top:3px; } #app { padding-top:16px; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <main class="wrap">
+    <header class="top">
+      <div class="logo">R</div>
+      <div><div class="brand">RIKK OFFICIALL</div><div class="subbrand">DIRECT LINK TOOL</div></div>
+    </header>
+    <div class="pill">⚡ <span>LINK ROUTER · BLUE EDITION</span></div>
+    <h1>Langsung ke <span>tujuan.</span></h1>
+    <p class="lead">Masukkan URL tujuan MediaFire atau Safefileku yang langsung. Tool ini akan mengenali domain dan membuka link tujuan tanpa halaman tambahan dari website ini.</p>
+    <section class="panel">
+      <label for="url">Tempel link tujuan di sini</label>
+      <textarea id="url" placeholder="https://www.mediafire.com/file/...&#10;atau&#10;https://safefileku.com/..."></textarea>
+      <div class="actions">
+        <button class="primary" id="go">↗ Buka Link Tujuan</button>
+        <button class="secondary" id="paste">Tempel</button>
+        <button class="secondary" id="clear">Hapus</button>
+      </div>
+      <div class="result" id="result" role="status" aria-live="polite"><strong id="statusTitle"></strong><p id="statusText"></p></div>
+      <p class="small">Catatan: URL pendek/perantara seperti sfl.gl mungkin menampilkan iklan atau tugas sebelum tujuan dibuka. Tool ini tidak mengekstrak tujuan tersembunyi atau melewati gerbang akses; tempel URL MediaFire/Safefileku tujuan jika kamu memilikinya.</p>
+    </section>
+    <div class="features">
+      <div class="feature"><div class="ico">🔎</div><div><b>Deteksi Domain</b><span>Mengenali domain tujuan yang didukung.</span></div></div>
+      <div class="feature"><div class="ico">🚀</div><div><b>Buka Langsung</b><span>Membuka URL tujuan di tab browser baru.</span></div></div>
+      <div class="feature"><div class="ico">🛡️</div><div><b>Validasi Dasar</b><span>Menolak URL tidak valid atau domain yang tidak dikenali.</span></div></div>
+    </div>
+    <footer>RIKK OFFICIALL · LINK TOOL · 2026</footer>
+  </main>
+</div>
+<script>
+const input = document.getElementById('url');
+const result = document.getElementById('result');
+const statusTitle = document.getElementById('statusTitle');
+const statusText = document.getElementById('statusText');
+function message(title, text, kind) {
+  result.className = 'result show ' + (kind || '');
+  statusTitle.textContent = title;
+  statusText.textContent = text;
+}
+function analyzeAndOpen() {
+  let raw = input.value.trim();
+  if (!raw) { message('Link belum diisi', 'Tempel URL MediaFire atau Safefileku tujuan terlebih dahulu.', 'bad'); return; }
+  if (!/^https?:\/\//i.test(raw)) raw = 'https://' + raw;
+  let u;
+  try { u = new URL(raw); } catch { message('Format link tidak valid', 'Periksa kembali URL yang kamu tempel.', 'bad'); return; }
+  if (u.protocol !== 'https:' && u.protocol !== 'http:') { message('Protokol tidak didukung', 'Gunakan link HTTP atau HTTPS.', 'bad'); return; }
+  const host = u.hostname.toLowerCase().replace(/^www\./, '');
+  const mediafire = host === 'mediafire.com' || host.endsWith('.mediafire.com');
+  const safefileku = host === 'safefileku.com' || host.endsWith('.safefileku.com');
+  const shortLink = host === 'sfl.gl' || host.endsWith('.sfl.gl');
+  if (shortLink) {
+    message('Ini link perantara', 'Domain sfl.gl bukan link tujuan langsung. Jika halaman perantara menyebut URL tujuan, salin URL MediaFire/Safefileku tersebut lalu tempel di sini.', 'bad');
+    return;
+  }
+  if (!mediafire && !safefileku) {
+    message('Domain belum didukung', 'Masukkan URL tujuan yang domainnya MediaFire atau Safefileku.', 'bad');
+    return;
+  }
+  message('Domain dikenali ✓', 'Membuka ' + host + '. Pastikan sumber link tepercaya sebelum mengunduh.', 'good');
+  window.open(u.href, '_blank', 'noopener,noreferrer');
+}
+document.getElementById('go').addEventListener('click', analyzeAndOpen);
+document.getElementById('clear').addEventListener('click', () => { input.value=''; result.className='result'; input.focus(); });
+document.getElementById('paste').addEventListener('click', async () => {
+  try { input.value = await navigator.clipboard.readText(); message('Link ditempel', 'Periksa URL, lalu tekan Buka Link Tujuan.', 'good'); }
+  catch { input.focus(); message('Tempel manual', 'Tekan lama kolom link lalu pilih Tempel dari menu Android.', 'bad'); }
+});
+input.addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') analyzeAndOpen(); });
+</script>
+</body>
+</html>
